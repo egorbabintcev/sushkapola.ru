@@ -1,0 +1,24 @@
+@import '../libs/include-media'
+@import '../utilities/variables'
+
+=make-container()
+	width: 100%
+
+	+media('>=xl')
+		max-width: 1170px
+	+media('<=xl', '>=lg')
+		max-width: 990px
+	+media('<=lg', '>=md')
+		max-width: 750px
+	+media('<=md', '>=xs')
+		max-width: 570px
+	margin: 0 auto
+	padding:
+		left: $grid-gutter / 2
+		right: $grid-gutter / 2
+
+=make-row()
+	width: 100%
+	display: grid
+	grid-template-columns: repeat($grid-columns, 1fr)
+	grid-gap: $grid-gutter
