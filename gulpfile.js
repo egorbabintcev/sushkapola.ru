@@ -58,6 +58,7 @@ gulp.task('dev:server', function() {
 gulp.task('dev:watch', function() {
 	gulp.watch('app/src/sass/**/*.(sass|scss)', gulp.parallel('dev:styles'));
 	gulp.watch([ 'app/src/js/**/*.js', 'app/src/libs/**/*.js' ], gulp.parallel('dev:scripts'));
+	gulp.watch('app/src/pug/**/*.pug', gulp.parallel('dev:markup'));
 })
 
 gulp.task('dev:all', gulp.parallel('dev:server', 'dev:watch'));
