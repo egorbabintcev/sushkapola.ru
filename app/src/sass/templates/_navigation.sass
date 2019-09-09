@@ -1,0 +1,90 @@
+.nav
+  padding: 15px 0
+
+  +media('<=md')
+    padding: 5px 0
+  &__container
+    @extend %flex
+    justify-content: center
+
+    +media('<=md')
+      flex-direction: column
+      align-items: center
+      position: relative
+  &-toggler
+    cursor: pointer
+
+    +media('>=md')
+      display: none
+    &__icon
+      font-size: 3rem
+  &-list
+    @extend %flex
+
+    +media('<=md')
+      width: 100%
+      position: absolute
+      top: 100%
+      flex-direction: column
+      align-items: center
+      transition: all .3s ease-in-out
+      transform-origin: 0 0
+      transform: scaleY(0)
+      &_expanded
+        transform: scaleY(1)
+    &__item
+      +media('>=md')
+        padding: 0 20px
+      +media('<=md') 
+        padding: 10px 0
+      &-link
+        text-transform: uppercase
+        font:
+          size: 1.8rem
+          weight: 500
+      &-marker
+        margin-left: 5px
+        font-size: 1.5rem
+      &_dropdown
+        position: relative
+
+        +media('<=md')
+          display: flex
+          flex-direction: column
+          align-items: center
+  &-dropdownlist
+    flex-direction: column
+
+    +media('<=md')
+      display: none
+      padding: 5px 0      
+    +media('>=md')
+      display: flex
+      min-width: 50rem
+      padding: 10px
+      position: absolute
+      background-color: $light
+      transition: all .5s ease-in-out
+      visibility: hidden
+      opacity: 0
+    &__item      
+      padding: 10px 0
+      border-bottom: 1px solid rgba($dark, 0.5)
+
+      +media('<=md')
+        text-align: center
+      +media('>=md')
+        transition: padding .25s
+        &:hover
+          padding-left: 10px
+      &-link
+        text-transform: uppercase
+        font:
+          size: 1.8rem
+          weight: 500
+    &_expanded
+      +media('<=md')
+       display: flex
+      +media('>=md')
+        visibility: visible
+        opacity: 1    
