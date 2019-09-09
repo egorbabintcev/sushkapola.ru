@@ -1,0 +1,42 @@
+.article
+  padding-bottom: 70px
+  &__container
+    @extend %flex
+    flex-direction: column
+  &__title
+    margin-bottom: 40px
+    text-align: center
+    text-transform: uppercase
+    font:
+      size: 3.2rem
+      weight: 700
+  &__image
+    width: 100%
+    height: 300px
+    margin: 40px 0
+    background:
+      size: cover
+      position: center
+  &__paragraph
+    margin-bottom: 25px
+    line-height: 3.6rem
+    font: 
+      size: 2.2rem
+      weight: 500
+  &__list
+    padding-left: 20px
+    &-item
+      @extend %flex
+      align-items: center
+      margin-bottom: 20px
+      &:last-child
+        margin-bottom: 0
+    &-text
+      line-height: 3rem
+      font:
+        size: 2.2rem
+        weight: 500
+    &-marker
+      margin-right: 15px
+      color: $darkAccent
+      font-size: 2.5rem
