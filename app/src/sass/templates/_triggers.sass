@@ -1,0 +1,36 @@
+.triggers
+  padding: 60px 0 70px
+  &__container
+    @extend %flex
+    flex-direction: column
+    align-items: center
+  &__title
+    margin-bottom: 60px
+    text-transform: uppercase
+    text-align: center
+    font:
+      size: 3.2rem
+      weight: 700
+.trigger  
+  @extend %flex
+  flex-direction: column
+  align-items: center
+
+  +media('>=md')
+    grid-column: span 3
+  +media('<=lg', '>=md')
+    grid-column: span 6
+  +media('<=md')
+    grid-column: span 12
+  &__icon
+    margin-bottom: 20px
+    &-symbol
+      color: $lightAccent
+      font-size: 8rem
+  &__title
+    text-align: center
+    text-transform: uppercase
+    font:
+      size: 2rem
+      weight: 600
+    
