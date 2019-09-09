@@ -1,0 +1,32 @@
+.hww
+  padding-bottom: 70px
+  &__container
+    @extend %flex
+    flex-direction: column
+    align-items: center
+  &__title
+    margin-bottom: 40px
+    text-align: center
+    text-transform: uppercase
+    font:
+      size: 2.8rem
+      weight: 700
+  &-step
+    @extend %flex
+    flex-direction: column
+    align-items: center
+
+    +media('>=md')
+      grid-column: span 4
+    +media('<=md')
+      grid-column: span 12
+    &__icon
+      margin-bottom: 15px
+      &-symbol
+        color: $lightAccent
+        font-size: 8rem
+    &__title
+      text-align: center
+      font:
+        size: 2rem
+        weight: 500
