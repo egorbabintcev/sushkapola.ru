@@ -1,41 +1,41 @@
+-
+  var patterns = [
+    {
+      title: 'Просушка пола без демонтажа',
+      imgUrl: 'img/sushka-floor.jpg'
+    },
+    {
+      title: 'Просушка стен и потолка',
+      imgUrl: 'sushka-walls-and-ceil.jpg'
+    },
+    {
+      title: 'Просушка подвальных помещений',
+      imgUrl: 'sushka-basement.jpg'
+    },
+    {
+      title: 'Просушка чердаков и мансард',
+      imgUrl: 'sushka-mansard.jpg'
+    },
+    {
+      title: 'Осушение воздуха в бассейне',
+      imgUrl: 'img/sushka-pool.jpg'
+    },
+    {
+      title: 'Просушка складов и ангаров',
+      imgUrl: 'img/sushka-storage.jpg'
+    },
+    {
+      title: 'Просушка помещений перед ремонтом',
+      imgUrl: 'img/sushka-before-repairs.jpg'
+    },
+    {
+      title: 'Удаление плесени',
+      imgUrl: 'img/sushka-clean-mold.jpg'
+    }
+  ];      
 section.services
     h2.services__title
     .row.services__row
-      -
-        var patterns = [
-          {
-            title: 'Просушка пола без демонтажа',
-            imgUrl: 'img/sushka-floor.jpg'
-          },
-          {
-            title: 'Просушка стен и потолка',
-            imgUrl: 'sushka-walls-and-ceil.jpg'
-          },
-          {
-            title: 'Просушка подвальных помещений',
-            imgUrl: 'sushka-basement.jpg'
-          },
-          {
-            title: 'Просушка чердаков и мансард',
-            imgUrl: 'sushka-mansard.jpg'
-          },
-          {
-            title: 'Осушение воздуха в бассейне',
-            imgUrl: 'img/sushka-pool.jpg'
-          },
-          {
-            title: 'Просушка складов и ангаров',
-            imgUrl: 'img/sushka-storage.jpg'
-          },
-          {
-            title: 'Просушка помещений перед ремонтом',
-            imgUrl: 'img/sushka-before-repairs.jpg'
-          },
-          {
-            title: 'Удаление плесени',
-            imgUrl: 'img/sushka-clean-mold.jpg'
-          }
-        ];      
       each pattern in patterns
         .service
           .service__image(data-bg=pattern.imgUrl)

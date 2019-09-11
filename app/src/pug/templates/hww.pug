@@ -1,16 +1,24 @@
+-
+  var patterns = [
+    {
+      title: 'После обращения в течение часа мы выезжаем к вам для осмотра ущерба, замеров влажности и составления плана осушительных работ',
+      iconClass: 'fa-hourglass-half'
+    },
+    {
+      title: 'Работая оперативно без выходных 24 часа, доставляем и устанавливаем оборудование в течении двух часов, и начинаем процесс осушения',
+      iconClass: 'fa-user-hard-hat'
+    },
+    {
+      title: 'Ежедневно контролируем процесс осушения, проводя замеры остаточной влаги во избежание появления плесени',
+      iconClass: 'fa-ruler-combined'
+    }
+  ];
 section.hww
   .container.hww__container
     h2.hww__title Как мы работаем
     .row
-      .hww-step
-        .hww-step__icon
-          i.hww-step__icon-symbol.fal.fa-hourglass-half
-        h4.hww-step__title После обращения в течение часа мы выезжаем к вам для осмотра ущерба, замеров влажности и составления плана осушительных работ
-      .hww-step
-        .hww-step__icon
-          i.hww-step__icon-symbol.fal.fa-user-hard-hat
-        h4.hww-step__title Работая оперативно без выходных 24 часа, доставляем и устанавливаем оборудование в течении двух часов, и начинаем процесс осушения
-      .hww-step
-        .hww-step__icon
-          i.hww-step__icon-symbol.fal.fa-ruler-combined
-        h4.hww-step__title Ежедневно контролируем процесс осушения, проводя замеры остаточной влаги во избежание появления плесени
+      each pattern in patterns
+        .hww-step
+          .hww-step__icon
+            i.hww-step__icon-symbol.fal(class=pattern.iconClass)
+          h4.hww-step__title= pattern.title
