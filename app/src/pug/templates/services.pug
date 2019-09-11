@@ -6,15 +6,15 @@
     },
     {
       title: 'Просушка стен и потолка',
-      imgUrl: 'sushka-walls-and-ceil.jpg'
+      imgUrl: 'img/sushka-walls-and-ceil.jpg'
     },
     {
       title: 'Просушка подвальных помещений',
-      imgUrl: 'sushka-basement.jpg'
+      imgUrl: 'img/sushka-basement.jpg'
     },
     {
       title: 'Просушка чердаков и мансард',
-      imgUrl: 'sushka-mansard.jpg'
+      imgUrl: 'img/sushka-mansard.jpg'
     },
     {
       title: 'Осушение воздуха в бассейне',
@@ -34,10 +34,10 @@
     }
   ];      
 section.services
-    h2.services__title
+    h2.services__title Какие услуги мы предоставляем?
     .row.services__row
       each pattern in patterns
         .service
           .service__image(data-bg=pattern.imgUrl)
-          .service__heading
+          a.service__heading
             h3.service__heading-title= pattern.title

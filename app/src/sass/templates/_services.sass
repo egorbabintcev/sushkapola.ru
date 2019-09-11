@@ -1,12 +1,20 @@
 .services
   padding-bottom: 120px
   &__title
+    margin-bottom: 40px
+    text-align: center
+    text-transform: uppercase
+    font:
+      size: 2.8rem
+      weight: 700
   &__row
     grid-gap: 0
 .service
   @extend %flex
   flex-direction: column
   align-items: stretch
+  &:hover &__image::before
+    background-color: rgba($light, 0.25)
 
   +media('>=xl')
     grid-column: span 3
@@ -16,15 +24,24 @@
     grid-column: span 12
   &__image
     height: 300px
+    position: relative
     background:
       size: cover
       position: center
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: rgba($light, 0.15)
+      transition: background-color 0.5s  
   &__heading
     @extend %flex
     align-items: center
     justify-content: center
     min-height: 9rem
-    background-color: $darkAccent
+    background-color: $darkAccent            
     &-title
       color: $light
       text-align: center
