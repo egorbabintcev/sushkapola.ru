@@ -1,4 +1,5 @@
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV === 'development' ? true : false;
+const projectName = 'sushkapola.ru';
 
 // Modules
 
@@ -19,6 +20,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var plumber = require('gulp-plumber');
 var gulpIf = require('gulp-if');
 var rename = require('gulp-rename');
+var zip = require('gulp-zip');
 var del = require('del');
 
 var browserSync = require('browser-sync').create();
@@ -41,8 +43,8 @@ gulp.task('dev:scripts', function() {
 })
 
 gulp.task('dev:markup', function() {
-	return gulp.src('app/src/pug/pages/*.pug')		
-		.pipe(pug({ pretty: true }))		
+	return gulp.src('app/src/pug/pages/*.pug')
+		.pipe(pug({ pretty: true }))
 		.pipe(gulp.dest('app/public/'))
 })
 
@@ -106,6 +108,12 @@ gulp.task('deploy:clean', function() {
 	return del('dist');
 })
 
+gulp.task('deploy:zip', function() {
+	return gulp.src('dist/**/*')
+		.pipe(zip(`${projectName}.zip`))
+		.pipe(gulp.dest('./'))
+})
+
 gulp.task('deploy:all', gulp.series(
 	'deploy:clean',
 	gulp.parallel(
@@ -114,8 +122,9 @@ gulp.task('deploy:all', gulp.series(
 		gulp.series('dev:markup', 'deploy:markup'),
 		'deploy:img',
 		'deploy:fonts',
-		'deploy:assets'
-	)
+		'deploy:assets',
+	),
+	'deploy:zip'
 ))
 
 gulp.task('default', isDevelopment ? gulp.parallel('dev:all') : gulp.parallel('deploy:all'));
