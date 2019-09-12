@@ -5,8 +5,9 @@ block head
   - var description = "Срочно просушить стены и потолок? Мы поможем. Профессиональное оборудование, оформление документов по стандарту, выгодная цена. Быстро и качественно просушить стены и потолок - легко";
 
 block body
-  include ../templates/header.pug
-  include ../templates/navigation.pug
+  .sticky
+    include ../templates/header.pug
+    include ../templates/navigation.pug
   main.main
     article.article
       .container.article__container

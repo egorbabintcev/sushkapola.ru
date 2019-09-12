@@ -1,12 +1,13 @@
-extends ../templates/base.pug 
+extends ../templates/base.pug
 
 block head
   - var title = "Просушка домов, квартир и других помещений при помощи профессионального оборудования";
   - var description = "Затопили соседи сверху? Во время тушения пожара затопили помещение? Прорвало трубу или систему отопления? Проблемы с гидроизоляцией помещения? Не беда! Мы решим все эти проблемы при помощи специального оборудования быстро, качественно и максимально дешево. Просушить квартиру или дом - без проблем";
 
 block body
-  include ../templates/header.pug
-  include ../templates/navigation.pug
+  .sticky
+    include ../templates/header.pug
+    include ../templates/navigation.pug
   main.main
     include ../templates/intro.pug
     include ../templates/triggers.pug
@@ -29,7 +30,7 @@ block body
             h4.article__list-text На стенах образуется плесень (или грибок), которая не только разрушает строительный материал, но и оказывает негативное воздействие на здоровье человека (может возникнуть аллергия, астма и другие хронические заболевания)
           li.article__list-item
             i.article__list-marker.fal.fa-exclamation-circle
-            h4.article__list-text Возникает неприятный запах сырости    
+            h4.article__list-text Возникает неприятный запах сырости
     include ../templates/hww.pug
     include ../templates/services.pug
   include ../templates/footer.pug
