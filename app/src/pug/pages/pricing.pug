@@ -1,7 +1,37 @@
-extends ../templates/base.pug 
+extends ../templates/base.pug
 
 block head
   - var title = "Цены на профессиональное осушение помещений";
   - var description = "";
 
 block body
+  include ../templates/header.pug
+  include ../templates/navigation.pug
+  main.main
+    include ../templates/triggers.pug
+    article.article
+      .container.article__container
+        h1.article__title Профессиональное  осушение жилых помещений
+        ul.article__list
+          li.article__list-item
+            i.article__list-marker.fal.fa-check-circle
+            h2.article__list-text До 10м2 - 15 000 руб.
+          li.article__list-item
+            i.article__list-marker.fal.fa-check-circle
+            h2.article__list-text От 10м2 до 30м2 - от 15 000 до 30 000 руб.
+          li.article__list-item
+            i.article__list-marker.fal.fa-check-circle
+            h2.article__list-text От 30м2 до 70м2 - от 30 000 до 60 000 руб.
+          li.article__list-item
+            i.article__list-marker.fal.fa-check-circle
+            h2.article__list-text От 70м2 до 150м2 - от 60 000 до 120 000 руб.
+          li.article__list-item
+            i.article__list-marker.fal.fa-check-circle
+            h2.article__list-text От 150м2 цена рассчитывается индивидуально
+        p.article__paragraph.article__paragraph Профессиональное осушение промышленных объектов, коммерческих помещений и других НЕжилых помещений рассчитывается индивидуально.
+        p.article__paragraph.article__paragraph_bold Реальная цена может сильно отличаться от представленной, т.к. изменяется в зависимости от конкретного случая. За расчетом обращайтесь к нашему менеджеру в
+          a.article__paragraph.article__paragraph_link.article__paragraph_bold(href="")  WhatsApp |
+          a.article__paragraph.article__paragraph_link.article__paragraph_bold(href="")  Viber |
+          a.article__paragraph.article__paragraph_link.article__paragraph_bold(href="")  по телефону +7 926 286 37 81
+    include ../templates/hww.pug
+  include ../templates/footer.pug

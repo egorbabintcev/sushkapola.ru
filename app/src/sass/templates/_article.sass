@@ -1,5 +1,7 @@
 .article
   padding-bottom: 120px
+  & + .triggers
+    padding-top: 0
   &__container
     @extend %flex
     flex-direction: column
@@ -10,21 +12,41 @@
     font:
       size: 2.8rem
       weight: 700
+    &_mtop
+      margin:
+        bottom: 0
+        top: 60px
+    &_mall
+      margin:
+        bottom: 50px
+        top: 60px
   &__image
     width: 100%
-    height: 300px
+    height: 450px
     margin: 40px 0
     background:
       size: cover
       position: center
+    &_hidden
+      display: none
+
+    +media('<=lg')
+      height: 400px
+    +media('<=md')
+      height: 350px
   &__paragraph
     margin-bottom: 25px
     line-height: 3.6rem
-    font: 
+    font:
       size: 2.2rem
       weight: 500
+    &_link
+      color: $darkAccent
+    &_bold
+      font-weight: 600
   &__list
     padding-left: 20px
+    margin-bottom: 25px
     &-item
       @extend %flex
       align-items: center

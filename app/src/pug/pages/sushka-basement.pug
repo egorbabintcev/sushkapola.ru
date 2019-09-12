@@ -1,7 +1,52 @@
-extends ../templates/base.pug 
+extends ../templates/base.pug
 
 block head
   - var title = "Убрать сырость из подвала | Срочно | Дешево";
   - var description = "";
 
 block body
+  include ../templates/header.pug
+  include ../templates/navigation.pug
+  main.main
+    article.article
+      .container.article__container
+        h1.article__title.article__title_mtop Просушка подвальных помещений
+        .article__image(data-bg="img/sushka-basement.jpg")
+        p.article__paragraph Влажность и конденсат в подвальном помещении могут образоваться по разным причинам. Виной этому могут стать:
+        ul.article__list
+          li.article__list-item
+            i.article__list-marker.fal.fa-exclamation-circle
+            h2.article__list-text Ошибки при разработке проектной документации или нарушение технологии строительства
+          li.article__list-item
+            i.article__list-marker.fal.fa-exclamation-circle
+            h2.article__list-text Повреждение гидроизоляционных покрытий
+          li.article__list-item
+            i.article__list-marker.fal.fa-exclamation-circle
+            h2.article__list-text Неисправности в системе водопровода
+          li.article__list-item
+            i.article__list-marker.fal.fa-exclamation-circle
+            h2.article__list-text Изменение уровня грунтовых вод
+          li.article__list-item
+            i.article__list-marker.fal.fa-exclamation-circle
+            h2.article__list-text И другие причины
+        p.article__paragraph Вода в подвале дома может нанести значительный материальный ущерб хозяевам:
+        ul.article__list
+          li.article__list-item
+            i.article__list-marker.fal.fa-exclamation-circle
+            h2.article__list-text Страдает электропроводка, выходят из строя приборы
+          li.article__list-item
+            i.article__list-marker.fal.fa-exclamation-circle
+            h2.article__list-text Портится мебель
+          li.article__list-item
+            i.article__list-marker.fal.fa-exclamation-circle
+            h2.article__list-text Начинают разрушаться перекрытия и стены здания
+          li.article__list-item
+            i.article__list-marker.fal.fa-exclamation-circle
+            h2.article__list-text образуется плесень, которая может негативно повлиять на ваше самочувствие - может развиться аллергия, астма и другие хронические заболевания
+        p.article__paragraph Если в вашем подвале влажность, не пытайтесь решить проблему самостоятельно. Скорее всего это займет немало времени, а результат вас не удовлетворит.
+        p.article__paragraph Чтобы решить эту проблему пригласите наших специалистов, которые с помощью специального оборудования быстро и качественно просушат любое подвальное помещение.
+        p.article__paragraph Прежде чем начать просушку подвала, мы произведем замеры остаточного уровня влаги в помещении и составим индивидуальный план работ. После завершения мы также сделаем замеры, чтобы не пересушить материалы, которые подверглись воздействию влаги.
+        p.article__paragraph Все замеры и результаты работы будут отражены в отчетных документах (согласно ГОСТ), которые наши специалисты предоставят вам. Узнать о цене вы можете на
+          a.article__paragraph_link  этой странице
+    include ../templates/triggers.pug
+  include ../templates/footer.pug

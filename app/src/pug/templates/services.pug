@@ -2,42 +2,50 @@
   var patterns = [
     {
       title: 'Просушка пола без демонтажа',
-      imgUrl: 'img/sushka-floor.jpg'
+      imgUrl: 'img/sushka-floor.jpg',
+      linkUrl: 'sushka-floor.html'
     },
     {
       title: 'Просушка стен и потолка',
-      imgUrl: 'img/sushka-walls-and-ceil.jpg'
+      imgUrl: 'img/sushka-walls-and-ceil.jpg',
+      linkUrl: 'sushka-walls-and-ceil.html'
     },
     {
       title: 'Просушка подвальных помещений',
-      imgUrl: 'img/sushka-basement.jpg'
+      imgUrl: 'img/sushka-basement.jpg',
+      linkUrl: 'sushka-basement.html'
     },
     {
       title: 'Просушка чердаков и мансард',
-      imgUrl: 'img/sushka-mansard.jpg'
+      imgUrl: 'img/sushka-mansard.jpg',
+      linkUrl: 'sushka-mansard.html'
     },
     {
       title: 'Осушение воздуха в бассейне',
-      imgUrl: 'img/sushka-pool.jpg'
+      imgUrl: 'img/sushka-pool.jpg',
+      linkUrl: 'sushka-pool.html'
     },
     {
       title: 'Просушка складов и ангаров',
-      imgUrl: 'img/sushka-storage.jpg'
+      imgUrl: 'img/sushka-storage.jpg',
+      linkUrl: 'sushka-storage.html'
     },
     {
       title: 'Просушка помещений перед ремонтом',
-      imgUrl: 'img/sushka-before-repairs.jpg'
+      imgUrl: 'img/sushka-before-repairs.jpg',
+      linkUrl: 'sushka-before-repairs.html'
     },
     {
       title: 'Удаление плесени',
-      imgUrl: 'img/sushka-clean-mold.jpg'
+      imgUrl: 'img/sushka-clean-mold.jpg',
+      linkUrl: 'sushka-clean-mold.html'
     }
-  ];      
+  ];
 section.services
     h2.services__title Какие услуги мы предоставляем?
     .row.services__row
       each pattern in patterns
-        .service
+        a.service(href=pattern.linkUrl)
           .service__image(data-bg=pattern.imgUrl)
-          a.service__heading
+          .service__heading
             h3.service__heading-title= pattern.title

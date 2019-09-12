@@ -1,7 +1,42 @@
-extends ../templates/base.pug 
+extends ../templates/base.pug
 
 block head
   - var title = "Сушка чердака и мансарды | Срочно | Быстро";
   - var description = "";
 
 block body
+  include ../templates/header.pug
+  include ../templates/navigation.pug
+  main.main
+    article.article
+      .container.article__container
+        h1.article__title.article__title_mtop Просушка чердаков и мансард
+        .article__image(data-bg="img/sushka-mansard.jpg")
+        p.article__paragraph Конденсат и влага и чердаке могут появиться, если у вас в доме нарушена естественная вентиляция, отсутствуют приточно-вытяжные системы или существуют проблемы с гидроизоляцией крыши.
+        p.article__paragraph Чрезмерная влажность на чердаке может привести к:
+        ul.article__list
+          li.article__list-item
+            i.article__list-marker.fal.fa-exclamation-circle
+            h3.article__list-text Образованию плесени на стенах и перекрытиях, которая постепенно будет разрушать строительный материал
+          li.article__list-item
+            i.article__list-marker.fal.fa-exclamation-circle
+            h3.article__list-text Развитию патогенного «микроклимата». Грибок на стенах может вызывать аллергию, астму, а также быть источников других хронических заболеваний
+          li.article__list-item
+            i.article__list-marker.fal.fa-exclamation-circle
+            h3.article__list-text Коррозии металлических элементов кровли и дальнейшему ее разрушению
+          li.article__list-item
+            i.article__list-marker.fal.fa-exclamation-circle
+            h3.article__list-text Гниению деревянных перекрытий и балок
+          li.article__list-item
+            i.article__list-marker.fal.fa-exclamation-circle
+            h3.article__list-text Снижению эксплуатационных характеристик жилого помещения
+          li.article__list-item
+            i.article__list-marker.fal.fa-exclamation-circle
+            h3.article__list-text Увеличению расходов на обогрев помещения из-за намокшего теплоизоляционного слоя
+        p.article__paragraph Помимо устранения первопричины появления конденсата на чердаке, мы советуем вам провести работы по восстановлению оптимального уровня влажности.
+        p.article__paragraph Наши специалисты помогут вам решить эту проблему. Используя самые современное оборудование, мы быстро и качественно удалим влагу из внутренних слоев крыши.
+        p.article__paragraph Прежде чем начать процесс сушки, мы произведем замеры остаточного уровня влаги в помещении и составим индивидуальный план работ. После завершения мы также сделаем замеры, чтобы не пересушить материалы, которые подверглись воздействию влаги.
+        p.article__paragraph Все замеры и результаты работы будут отражены в отчетных документах (согласно ГОСТ), которые наши специалисты предоставят вам. Узнать о цене вам поможет
+          a.article__paragraph_link(href="pricing.html")  эта страница
+    include ../templates/triggers.pug
+  include ../templates/footer.pug

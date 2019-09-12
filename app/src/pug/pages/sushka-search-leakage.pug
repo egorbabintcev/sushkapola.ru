@@ -1,7 +1,23 @@
-extends ../templates/base.pug 
+extends ../templates/base.pug
 
 block head
   - var title = "Поиск протечки | Срочно | Дешево";
   - var description = "";
 
 block body
+  include ../templates/header.pug
+  include ../templates/navigation.pug
+  main.main
+    article.article
+      .container.article__container
+        h1.article__title.article__title_mall Поиск и обнаружение скрытых протечек после затопления
+        .article__image_hidden(data-bg="img/sushka-search-leakage.jpg")
+        p.article__paragraph Зачастую на проблему протечки воды в трудах и трубопроводах не обращают должного внимания, хотя это может нанести серьезный урон вашему дому. Например, помимо накопления излишней влаги в стенах помещения и возникновению плесени, протечка воды в подземном трубопроводе может привести к просадке фундамента.
+        p.article__paragraph Поиск скрытых протечек - сложный процесс, требующий специального оборудования - тепловой видеокамеры.
+        p.article__paragraph Мы осуществляем комплекс работ по поиску скрытых утечек, а также просушке помещения после устранения неполадок.
+        p.article__paragraph Наши специалисты проведут тепловизионную диагностику скрытых течей в трубах, расположенных в стенах, полах и даже под землей.
+        p.article__paragraph После обнаружения протечки инженер при необходимости зарисует схему прохождения и пересечения трубопроводов и электропроводки.
+        p.article__paragraph Кроме того, после устранения протечки мы можем просушить ваше помещение с помощью специального оборудования. Узнать о цене поможет
+          a.article__paragraph_link(href="pricing.html")  эта страница
+    include ../templates/triggers.pug
+  include ../templates/footer.pug
