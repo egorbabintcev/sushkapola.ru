@@ -105,7 +105,7 @@ gulp.task('deploy:assets', function() {
 })
 
 gulp.task('deploy:clean', function() {
-	return del('dist');
+	return del([ 'dist', '*.zip' ]);
 })
 
 gulp.task('deploy:zip', function() {
