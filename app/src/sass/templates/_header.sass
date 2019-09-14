@@ -7,14 +7,14 @@
   &__container
     @extend %flex
     justify-content: space-between
-    
+
     +media('<=md')
       flex-direction: column
       align-items: center
   &__logo
     @extend %flex
     align-items: center
-    
+
     +media('<=md')
       margin-bottom: 5px
     &-icon
@@ -26,14 +26,14 @@
   &__contacts
     @extend %flex
     align-items: center
-    
+
     +media('<=sm')
       flex-direction: column
   &__contact
     @extend %flex
     align-items: center
-    &-icon 
-      margin-right: 15px    
+    &-icon
+      margin-right: 15px
       &-symbol
         font-size: 3.5rem
         color: $lightAccent
@@ -50,3 +50,10 @@
         margin-right: 30px
       +media('<=sm')
         margin-bottom: 5px
+    &-wrapper
+      @extend %flex
+      flex-direction: column
+      &-text
+        font-size: 1.6rem
+        &:first-child
+          margin-bottom: 10px

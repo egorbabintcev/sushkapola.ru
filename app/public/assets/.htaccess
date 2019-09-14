@@ -1,0 +1,4 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^sushkapola\.ru$ [NC]
+RewriteRule ^(.*)$ https://

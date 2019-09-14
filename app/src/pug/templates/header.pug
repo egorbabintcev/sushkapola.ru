@@ -1,5 +1,7 @@
 header.header
   .container.header__container
+    .nav-toggler(data-target="#navigation")
+      i.nav-toggler__icon.fal.fa-bars
     a.header__logo(href="index.html")
       .header__logo-icon(data-bg="img/header-logo.png")
     .header__contacts
@@ -8,8 +10,10 @@ header.header
           i.header__contact-icon-symbol.header__contact-icon-symbol_whatsapp.fab.fa-whatsapp-square
         a.header__contact-icon(href="viber://chat?number=89262863781")
           i.header__contact-icon-symbol.header__contact-icon-symbol_viber.fab.fa-viber
-        a.header__contact-text(href="tel:+79262863781") +7 926 286 37 81
+        .header__contact-wrapper
+          a.header__contact-wrapper-text.header__contact-text(href="tel:+79262863781") +7 926 286 37 81 (Москва)
+          a.header__contact-wrapper-text.header__contact-text(href="tel:+79262863781") +7 926 286 37 81 (Ст. Петербург)
       .header__contact
         a.header__contact-icon
-          i.header__contact-icon-symbol.fal.fa-envelope  
+          i.header__contact-icon-symbol.fal.fa-envelope
         .header__contact-text kaster_troi@mail.ru

@@ -1,0 +1,4 @@
+Sitemap: https://sushkapola.ru/sitemap.xml
+User-agent: *
+Allow: /
+Host: https://sushkapola.ru
