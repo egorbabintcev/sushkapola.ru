@@ -2,4 +2,6 @@ Options +FollowSymlinks
 RewriteEngine On
 RewriteCond %{HTTP_HOST} !^www.sushkapola\.ru$ [NC]
 RewriteRule ^(.*)$ https://sushkapola.ru/$1 [R=301,L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ https://sushkapola.ru/ [R=301,L]
 ErrorDocument 404 https://sushkapola.ru/404.html
