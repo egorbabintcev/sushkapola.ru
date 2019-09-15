@@ -6,72 +6,77 @@
 
   <url>
     <loc>https://sushkapola.ru/</loc>
-    <lastmod>2019-09-13T07:16:09+00:00</lastmod>
+    <lastmod>2019-09-15T07:16:09+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
+    <loc>https://sushkapola.ru/index.html</loc>
+    <lastmod>2019-09-15</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://sushkapola.ru/sushka-pola.html</loc>
-    <lastmod>2019-09-13T07:16:09+00:00</lastmod>
+    <lastmod>2019-09-15T07:16:09+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://sushkapola.ru/sushka-sten.html</loc>
-    <lastmod>2019-09-13T07:16:09+00:00</lastmod>
+    <lastmod>2019-09-15T07:16:09+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://sushkapola.ru/sushka-podvala.html</loc>
-    <lastmod>2019-09-13T07:16:09+00:00</lastmod>
+    <lastmod>2019-09-15T07:16:09+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://sushkapola.ru/sushka-cherdak.html</loc>
-    <lastmod>2019-09-13T07:16:09+00:00</lastmod>
+    <lastmod>2019-09-15T07:16:09+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://sushkapola.ru/sushka-bassein.html</loc>
-    <lastmod>2019-09-13T07:16:09+00:00</lastmod>
+    <lastmod>2019-09-15T07:16:09+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://sushkapola.ru/sushka-sklad.html</loc>
-    <lastmod>2019-09-13T07:16:09+00:00</lastmod>
+    <lastmod>2019-09-15T07:16:09+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://sushkapola.ru/sushka-beforeRemont.html</loc>
-    <lastmod>2019-09-13T07:16:09+00:00</lastmod>
+    <lastmod>2019-09-15T07:16:09+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://sushkapola.ru/remont-cosmetic.html</loc>
-    <lastmod>2019-09-13T07:16:09+00:00</lastmod>
+    <lastmod>2019-09-15T07:16:09+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://sushkapola.ru/remont-wire.html</loc>
-    <lastmod>2019-09-13T07:16:09+00:00</lastmod>
+    <lastmod>2019-09-15T07:16:09+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://sushkapola.ru/poisk-protechek.html</loc>
-    <lastmod>2019-09-13T07:16:09+00:00</lastmod>
+    <lastmod>2019-09-15T07:16:09+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://sushkapola.ru/udalenie-pleseni.html</loc>
-    <lastmod>2019-09-13T07:16:09+00:00</lastmod>
+    <lastmod>2019-09-15T07:16:09+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://sushkapola.ru/pricing.html</loc>
-    <lastmod>2019-09-13T07:16:09+00:00</lastmod>
+    <lastmod>2019-09-15T07:16:09+00:00</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://sushkapola.ru/contacts.html</loc>
-    <lastmod>2019-09-13T07:16:09+00:00</lastmod>
+    <lastmod>2019-09-15T07:16:09+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
