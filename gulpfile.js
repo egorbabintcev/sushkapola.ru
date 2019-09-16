@@ -100,7 +100,7 @@ gulp.task('deploy:fonts', function() {
 })
 
 gulp.task('deploy:assets', function() {
-	return gulp.src('app/public/assets/**/*')
+	return gulp.src([ 'app/public/assets/**/*', 'app/public/assets/.htaccess' ])
 		.pipe(gulp.dest('dist/'))
 })
 
