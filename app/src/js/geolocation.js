@@ -11,7 +11,6 @@ if (!navigator) throw new Error('Geolocation is not supported');
 const coords = navigator.geolocation.getCurrentPosition(function(data) {
   const lat = data.coords.latitude;
   const lon = data.coords.longitude;
-  console.log(data);
   const requestConfig = {
     url: `https://eu1.locationiq.com/v1/reverse.php?key=e3a18d422b7c96&lat=${lat}&lon=${lon}&format=json`,
     method: 'GET',

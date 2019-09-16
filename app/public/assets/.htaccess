@@ -1,7 +1,11 @@
 Options +FollowSymlinks
 RewriteEngine On
-RewriteCond %{HTTP_HOST} !^www.sushkapola\.ru$ [NC]
-RewriteRule ^(.*)$ https://sushkapola.ru/$1 [R=301,L]
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
-RewriteRule ^index\.html$ https://sushkapola.ru/ [R=301,L]
-ErrorDocument 404 https://sushkapola.ru/404.html
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+RewriteCond %{REQUEST_URI} !^/robots.txt$
+RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{REQUEST_URI} !^/robots.txt$
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+RewriteCond %{REQUEST_URI} /index.html
+RewriteRule ^(.*)$ https://sushkapola.ru/ [R=301,L]
+ErrorDocument 404 /404.html
