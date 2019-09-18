@@ -109,7 +109,7 @@ gulp.task('deploy:clean', function() {
 })
 
 gulp.task('deploy:zip', function() {
-	return gulp.src('dist/**/*')
+	return gulp.src([ 'dist/**/*', 'dist/.htaccess' ])
 		.pipe(zip(`${projectName}.zip`))
 		.pipe(gulp.dest('./'))
 })
