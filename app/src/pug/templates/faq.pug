@@ -1,0 +1,60 @@
+-
+	var patterns = [
+		{
+			list: [
+				{
+					title: 'Делаете ремонт, и нужно проштукатурить стяжку пола или стены, покрытые штукатуркой?',
+					link: 'sushka-before-repairs.html'
+				},
+				{
+					title: 'Затопили соседи сверху?',
+					link: 'sushka-walls-and-ceil.html'
+				},
+				{
+					title: 'Прорвало фильтр для воды, трубу ХВС или ГВС?',
+					link: 'sushka-floor.html'
+				},
+				{
+					title: 'Протек полотенцесушитель?',
+					link: 'sushka-walls-and-ceil.html'
+				},
+				{
+					title: 'Протекла канализационная труба?',
+					link: 'sushka-floor.html'
+				}
+			]
+		},
+		{
+			list: [
+				{
+					title: 'Прорвало систему отопления?',
+					link: 'sushka-floor.html'
+				},
+				{
+					title: 'Появились плесень и/или грибок?',
+					link: 'sushka-clean-mold.html'
+				},
+				{
+					title: 'Обнаружили воду на чердаке/в мансарде после дождя?',
+					link: 'sushka-mansard.html'
+				},
+				{
+					title: 'Отсырел подвал, а вещи хранить больше негде?',
+					link: 'sushka-basement.html'
+				},
+				{
+					title: 'Протекает труба, но вы не знаете где?',
+					link: 'sushka-search-leakage.html'
+				}
+			]
+		}
+	]
+section.faq
+	.container.faq__container
+		.row.faq__row
+			each pattern in patterns
+				.ul.faq__list
+					each item in pattern.list
+						li.faq__question
+							i.faq__question-marker.fal.fa-question-circle
+							a.faq__question-link(href=item.link) #{item.title}

@@ -1,0 +1,29 @@
+.faq
+	padding-bottom: 120px
+	&__container
+	&__row
+	&__list
+		border: 2px solid #cdcdcd
+		padding: 10px
+		+media('>=md')
+			grid-column: span 6
+		+media('<=md')
+			grid-column: span 12
+	&__question
+		padding: 15px 0
+		@extend %flex
+		align-items: center
+		justify-content: flex-start
+		&:hover &-marker
+			font-weight: 900
+			transition: all .15s
+		&-marker
+			margin-right: 20px
+			color: $darkAccent
+			font-size: 3.5rem
+		&-link
+			text-decoration: underline
+			text-decoration-style: dotted
+			font:
+				size: 2rem
+				weight: 400
