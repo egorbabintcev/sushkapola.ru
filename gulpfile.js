@@ -52,7 +52,9 @@ gulp.task('dev:server', function() {
 	browserSync.init({
 		server: {
 			baseDir: 'app/public/'
-		}
+		},
+		open: false,
+		ghostMode: false
 	})
 	browserSync.watch('app/public/**/*').on('change', browserSync.reload);
 })
