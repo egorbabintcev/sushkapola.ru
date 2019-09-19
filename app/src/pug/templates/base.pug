@@ -12,15 +12,4 @@ html(lang="ru")
     link(rel="stylesheet", href="css/main.css")
   body
     block body
-    .microMarkup(itemscope, itemtype="http://schema.org/Organization")
-        span(itemprop="name") SushkaPola
-        | Контактная информация
-        div(itemprop="address" itemscope="", itemtype="http://schema.org/PostalAddress")
-          | Почтовый адрес:
-          span(itemprop="streetAddress") д65 стр.4, ул. Рябиновая
-          span(itemprop="postalCode") 121471
-          span(itemprop="addressLocality") Москва, Россия
-        span(itemprop="telephone") +7 926 286 37 81
-        span(itemprop="email") help@sushkapola.ru
-
     script(src="js/bundle.js")
