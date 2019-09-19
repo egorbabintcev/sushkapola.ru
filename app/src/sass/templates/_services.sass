@@ -12,9 +12,25 @@
 .service
   @extend %flex
   flex-direction: column
-  align-items: stretch
-  &:hover &__image::before
-    background-color: rgba($light, 0.25)
+  align-items: center
+  justify-content: flex-start
+  height: 300px
+  padding: 100px 10px 0
+  position: relative
+  background:
+    size: cover
+    position: center
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: rgba($dark, 0.35)
+    transition: background-color 0.5s
+  &:hover:before
+    background-color: $darkAccent
 
   +media('>=xl')
     grid-column: span 3
@@ -22,30 +38,26 @@
     grid-column: span 6
   +media('<=md')
     grid-column: span 12
-  &__image
-    height: 300px
-    position: relative
-    background:
-      size: cover
-      position: center
-    &:before
-      content: ''
-      display: block
-      position: absolute
-      width: 100%
-      height: 100%
-      background-color: rgba($light, 0.15)
-      transition: background-color 0.5s  
-  &__heading
-    @extend %flex
-    align-items: center
-    justify-content: center
-    min-height: 9rem
-    background-color: $darkAccent            
-    &-title
-      color: $light
-      text-align: center
-      text-transform: uppercase
-      font:
-        size: 2rem
-        weight: 700
+  &__button
+    z-index: 3
+    padding: 10px 30px
+    margin-bottom: 20px
+    border: 2px solid $light
+    color: $light
+    text-transform: uppercase
+    font:
+      size: 1.8rem
+      weight: 600
+    &:hover
+      background-color: $light
+      color: $dark
+      transition: all .5s
+
+  &__title
+    z-index: 3
+    color: $light
+    text-align: center
+    text-transform: uppercase
+    font:
+      size: 2rem
+      weight: 700

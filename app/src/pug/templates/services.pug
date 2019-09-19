@@ -45,7 +45,6 @@ section.services
     h2.services__title Какие услуги мы предоставляем?
     .row.services__row
       each pattern in patterns
-        a.service(href=pattern.linkUrl)
-          .service__image(data-bg=pattern.imgUrl)
-          .service__heading
-            h3.service__heading-title= pattern.title
+        a.service(href=pattern.linkUrl, data-bg=pattern.imgUrl)
+            span.service__button подробнее
+            h3.service__title= pattern.title
