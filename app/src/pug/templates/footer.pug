@@ -1,20 +1,43 @@
+-
+  var patterns = [
+    {
+      locality: "Москва",
+      street: "ул. Пушкина, д. Колотушкина",
+      postal: "148800",
+      phone: "+7 977 286 22 63",
+      mail: "help@sushkapola.ru"
+    },
+    {
+      locality: "Санкт-Петербург",
+      street: "ул. Туева, д. Кукуева",
+      postal: "228141",
+      phone: "+7 926 286 37 81",
+      mail: "help@sushkapola.ru"
+    }
+  ];
+
 footer.footer
   .container.footer__container
-    .microMarkup(itemscope, itemtype="http://schema.org/Organization")
-      span(itemprop="name") SushkaPola
-      | Контактная информация
-      div(itemprop="address" itemscope="", itemtype="http://schema.org/PostalAddress")
-        | Почтовый адрес:
-        span(itemprop="streetAddress") д65 стр.4, ул. Рябиновая
-        span(itemprop="postalCode") 121471
-        span(itemprop="addressLocality") Москва, Россия
-      span(itemprop="telephone") +7 926 286 37 81
-      span(itemprop="email") help@sushkapola.ru
-    a.footer__social(href="https://wa.me/79262863781")
-      i.footer__social-icon.fab.fa-whatsapp-square
-    a.footer__social(href="viber://chat?number=89262863781")
-      i.footer__social-icon.fab.fa-viber
-    a.footer__social(href="mailto:kaster_troi@mail.ru")
-      i.footer__social-icon.fal.fa-envelope
-    a.footer__social(href="tel:+79262863781")
-      i.footer__social-icon.fal.fa-phone
+    .row.footer__row
+      each pattern in patterns
+        .footer-contacts(itemscope, itemtype="http://schema.org/Organization")
+          span.footer-contacts__name(itemprop="name") SushkaPola
+          .footer__address(itemprop="address", itemscope, itemtype="https://schema.org/PostalAddress")
+            .footer__address-field.footer__address-field_title
+              .footer__address-icon.footer__address-icon_title
+                i.footer__address-marker.footer__address-marker_title.fal.fa-location
+              span.footer__address-text.footer__address-text_title(itemprop="addressLocality") #{pattern.locality}
+            .footer__address-field
+              span.footer__address-text(itemprop="streetAddress") #{pattern.street}
+            .footer__address-field
+              span.footer__address-text(itemprop="postalCode") #{pattern.postal}
+            .footer__address-field
+              a.footer__address-icon(href=`tel:${pattern.phone.replace(/\s/g, '')}`)
+                i.footer__address-marker.fal.fa-phone
+              a.footer__address-icon(href=`https://wa.me/${pattern.phone.replace(/\s/g, '')}`)
+                i.footer__address-marker.fab.fa-whatsapp-square
+              a.footer__address-icon(href=`viber://chat?number=${pattern.phone.replace(/\+7/, "8").replace(/\s/g, '')}`)
+                i.footer__address-marker.fab.fa-viber
+              span.footer__address-text(itemprop="telephone") #{pattern.phone}
+            .footer__address-field.footer__address-field_hidden
+              span.footer__address-text(itemprop="email") #{pattern.mail}

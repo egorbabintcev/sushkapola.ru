@@ -1,13 +1,46 @@
 .footer
-  padding-bottom: 20px
+  padding:
+    top: 80px
+    bottom: 120px
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.6) 65.63%, rgba(255, 255, 255, 0) 100%), url('../img/footer-background.jpg')
+    size: cover
+    position: center
   &__container
     @extend %flex
     align-items: center
     justify-content: center
-  &__social
-    margin-right: 15px
-    &:last-child
-      margin-right: 0
+  &-contacts
+    +media('>=md')
+      grid-column: span 6
+    +media('<=md')
+      grid-column: span 12
+      margin-bottom: 30px
+      &:last-child
+        margin-bottom: 0
+    @extend %flex
+    justify-content: center
+    &__name
+      display: none
+  &__address
+    &-text
+      font:
+        size: 2rem
+        weight: 500
+      &_title
+        font:
+          size: 2.6rem
+          weight: 700
+    &-field
+      @extend %flex
+      align-items: center
+      margin-bottom: 15px
+      &:last-child
+        margin-bottom: 0
+      &_title
+        margin-bottom: 25px
     &-icon
-      color: $darkAccent
-      font-size: 5rem
+      margin-right: 10px
+    &-marker
+      font-size: 3rem
+      &_title
+        font-size: 4rem
