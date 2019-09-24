@@ -6,6 +6,4 @@ RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
 RewriteCond %{HTTPS} !=on
 RewriteCond %{REQUEST_URI} !^/robots.txt$
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
-RewriteCond %{REQUEST_URI} /index.html
-RewriteRule ^(.*)$ https://sushkapola.ru/ [R=301,L]
 ErrorDocument 404 /404.html
