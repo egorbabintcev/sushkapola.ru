@@ -1,27 +1,49 @@
 {
-  "name": "project-template",
+  "name": "webpack-boilerplate",
   "version": "1.0.0",
   "main": "index.js",
+  "author": "Egor Babintsev <e.e.babintsev@yandex.ru>",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.0",
-    "gulp-csso": "^3.0.1",
-    "gulp-if": "^3.0.0",
-    "gulp-imagemin": "^6.1.0",
-    "gulp-pug": "^4.0.1",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-terser": "^1.2.0",
-    "gulp-zip": "^5.0.0",
-    "webpack-stream": "^5.2.1"
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "autoprefixer": "^9.7.0",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jquery": "^1.5.1",
+    "file-loader": "^4.2.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "glob-fs": "^0.1.7",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^8.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
   },
+  "scripts": {
+    "build:dev": "webpack-dev-server --env dev ",
+    "build:prod": "webpack --env prod"
+  },
+  "browserslist": [
+    "defaults"
+  ],
   "dependencies": {
-    "gulp-plumber": "^1.2.1",
     "include-media": "^1.4.9",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "lazyloadxt": "^1.1.0"
   }
 }

@@ -1,0 +1,62 @@
+@import '../utils/variables'
+@import '../utils/mixins'
+@import '../utils/grid'
+@import '../utils/typography'
+
+*
+  box-sizing: border-box
+
+html
+  font-size: 62.5%
+
+body
+  color: $dark
+  font-family: $mainFont
+  margin: 0
+
+h1, h2, h3, h4, h5, h6, p
+  margin: 0
+
+a
+  text-decoration: none
+  color: inherit
+  cursor: pointer
+
+button, input, textarea
+  padding: 0
+  margin: 0
+  border: none
+
+ul, ol
+  list-style: none
+  margin: 0
+  padding: 0
+
+// Patterns
+
+%flex
+  display: flex
+
+%grid
+  display: grid
+
+// Classes
+
+.container
+  +make-container()
+
+.row
+  +make-row()
+  display: grid
+
+.sticky
+  position: sticky
+  top: 0
+  background-color: $light
+  z-index: 4
+
+i[class*="whatsapp"]
+  color: #25d366
+
+i[class*="viber"]
+  color: #8f5db7

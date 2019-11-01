@@ -1,6 +1,5 @@
-node_modules/
-**/*.sublime-project
-**/*.sublime-workspace
-logs/
-dist/
-*.zip
+node_modules
+dist
+dest
+public
+.vscode
