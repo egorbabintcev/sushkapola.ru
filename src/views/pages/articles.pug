@@ -1,0 +1,31 @@
+extends ../layouts/base
+
+block head
+  - var title = "Статьи о просушке дома/квартиры/другого помещения";
+  - var description = "Затопление помещения - проблема, требующая оперативного решения. В этом вопросе важна помощь компетентных специалистов. В наших статьях вы можете найти информацию о том, как предовратить потоп и как бороться с ним, если все уже произошло";
+
+block body
+  - 
+    var patterns = [
+      {
+        img: 'img/articles-zatoplenie_kvartiry_chto_delat.jpg',
+        title: 'Затопление квартиры, что делать?',
+        description: 'С каждым могут произойти неприятности. Никто не застрахован от случайностей. Затопление квартиры - проблема, которая может поставить в неудобное положение. К потопу может вести множество причин, чтобы уберечься от них необходимо знать врага в лицо. В этой статье мы разберем основные причины “затопа” и действия при затоплении квартиры...',
+        link: 'articles/zatoplenie_kvartiry_chto_delat.html' 
+      }
+    ];
+
+  .sticky
+    include ../includes/header
+    include ../includes/navigation
+  main.main
+    section.articles-menu
+      .container
+        each pattern in patterns
+          .article-item
+            img.article-item__preview(data-src=pattern.img)
+            h2.article-item__title= pattern.title
+            p.article-item__description= pattern.description
+            a.article-item__button(href=pattern.link) Подробнее
+
+  include ../includes/footer
