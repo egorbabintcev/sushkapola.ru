@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /404.html
+Disallow: /errors/404.html
 Sitemap: https://sushkapola.ru/sitemap.xml
 Host: https://sushkapola.ru
